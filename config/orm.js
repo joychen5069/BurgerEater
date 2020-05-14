@@ -1,6 +1,7 @@
 const connection = require("./connection.js");
 
 const orm = {
+  //view all the burgers
   selectAll: function(tableInput,cb) {
     const queryString = "SELECT * FROM "+ tableInput + ";";
 
@@ -13,14 +14,21 @@ const orm = {
       
     });
   },
-  // insertOne: function(whatToSelect, table, orderCol) {
-  //   const queryString = "SELECT ?? FROM ?? ORDER BY ?? DESC";
-  //   console.log(queryString);
-  //   connection.query(queryString, [whatToSelect, table, orderCol], function(err, result) {
-  //     if (err) throw err;
-  //     console.log(result);
-  //   });
-  // },
+
+  //add a burger
+  insertOne: function(table, col, cb) {
+    const queryString = "INSERT INTO " + table + " SET ?";
+
+    console.log(queryString);
+    connection.query(queryString, {
+      burger_name: col,
+      devoured: false
+    }, function(err, result) {
+      if (err) throw err;
+      console.log(result);
+      cb(result)
+    });
+  },
   // updateOne: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo) {
   //   const queryString =
   //     "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id GROUP BY ?? ORDER BY count DESC LIMIT 1";
