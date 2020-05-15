@@ -28,7 +28,7 @@ router.post("/api/burgers", function (req, res) {
   });
 });
 
-//update the burger to be devoured if the user clicks on the button
+//create route to update the burger to be devoured if the user clicks on the button
 router.put("/api/burgers/:id", function(req, res) {
   let condition = "id = " + req.params.id;
 
