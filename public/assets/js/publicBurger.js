@@ -1,3 +1,5 @@
+//LEFT IN ES5 BECAUSE CONTINUOUS BREAKING IF CHANGED TO ES6
+
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
     $(".devour").on("click", function(event) {
@@ -27,8 +29,7 @@ $(function() {
       event.preventDefault();
       console.log("clicked")
   
-      var newBurger = {
-        name: $("#ca").val().trim(),
+      var newBurger = {        name: $("#ca").val().trim(),
         // devoured: $("[devoured=true]:checked").val().trim()
       };
   
