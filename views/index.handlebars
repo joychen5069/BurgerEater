@@ -1,13 +1,24 @@
 <h1>EAT A BURGER</h1>
 
+<h3>Which Burger would you like to eat?</h3>
 <ul>
     {{#each burgers}}
-        <li>
+        {{#unless devoured}}
             <p>{{burger_name}}
                  <button type="submit" class="devour" data-id="{{id}}">Devour</button>
             </p>
             
-        </li>
+       {{/unless}}
+    {{/each}}
+</ul>
+
+<h3>Burgers that have been eaten</h3>
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            <p>{{burger_name}}</p>
+            
+       {{/if}}
     {{/each}}
 </ul>
 
