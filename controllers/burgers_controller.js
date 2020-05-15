@@ -4,9 +4,10 @@ const burger = require('../models/burgers')
 const router = express.Router();
 
 // Create all our routes and set up logic within those routes where required.
+//create route to display all the burgers using handlebars
 router.get("/", function (req, res) {
   burger.selectAll(function (data) {
-    var hbsObject = {
+    let hbsObject = {
       burgers: data
     };
     console.log(hbsObject);
@@ -14,6 +15,7 @@ router.get("/", function (req, res) {
   });
 });
 
+//create route to add a burger to the 'not' devoured list
 router.post("/api/burgers", function (req, res) {
   console.log(req.body)
   burger.insertOne([
@@ -26,8 +28,9 @@ router.post("/api/burgers", function (req, res) {
   });
 });
 
+//update the burger to be devoured if the user clicks on the button
 router.put("/api/burgers/:id", function(req, res) {
-  var condition = "id = " + req.params.id;
+  let condition = "id = " + req.params.id;
 
   console.log("condition", condition);
 
