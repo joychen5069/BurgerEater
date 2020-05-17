@@ -1,5 +1,6 @@
 const mysql = require("mysql");
 
+//use heroku db if running off heroku
 let connection;
 
 if (process.env.JAWSDB_URL) {
