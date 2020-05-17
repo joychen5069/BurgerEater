@@ -24,9 +24,11 @@ As a burger enthusiast, I want to add burgers and eat burgers, so that I feel ac
 
 To use this application, run the following commands in your terminal to install the appropriate packages
 
-* npm i express 
-* npm i express-handlebars 
-* npm i mysql
+```
+npm i express 
+npm i express-handlebars 
+npm i mysql
+```
 
 ## Usage 
 
