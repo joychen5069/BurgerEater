@@ -6,6 +6,16 @@
   "scripts": {
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joychen5069/BurgerEater.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joychen5069/BurgerEater/issues"
+  },
+  "homepage": "https://github.com/joychen5069/BurgerEater#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
