@@ -1,3 +1,8 @@
+body {
+    background-image: url('../images/burger.png');
+    background-color: burlywood;
+}
+
 .container {
     background-color: rgb(245, 182, 64);
     margin-top: 5rem;
