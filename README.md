@@ -1,10 +1,12 @@
 # Welcome to Burger Eater by Joy
 
 [![JavScript](https://img.shields.io/badge/Made%20With-JavaScript-blue.svg)](https://shields.io/)  
+[![Dev](https://img.shields.io/badge/Version-dev-red.svg)](https://shields.io/)  
+[![Status](https://img.shields.io/badge/Status-Active-green.svg)](https://shields.io/)  
   
 ## Description
   
-This application allows the user to add burgers to a list and devour the ones they want.
+This application allows the user to add burgers to a list and devour the ones they want. It is a basic resturant burger application that utilizes Express, Express-handlebars, and MySQL. 
 
 ## User Story
 
@@ -28,7 +30,10 @@ To use this application, run the following commands in your terminal to install 
 
 ## Usage 
 
-After you've installed the packages, 
+After you've installed the packages, you can either run 
+    node server.js
+ 
+ or you can visit  https://eat-the-burger-by-joy-chen.herokuapp.com/ for the deployed version! Below is a demo of the application
 
 
 ## Demo
