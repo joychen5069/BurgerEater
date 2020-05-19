@@ -1,13 +1,14 @@
 //LEFT IN ES5 BECAUSE CONTINUOUS BREAKING IF CHANGED TO ES6
 
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-$(function() {
-    $(".devour").on("click", function(event) {
-        console.log("clicked devour")
-      var id = $(this).data("id");
-      var eat = $(this).data("eat");
+$(() =>{
+    $(".devour").on("click", (event) => {
+      event.preventDefault()
+      console.log("clicked devour")
+      let id = $(this).data("id");
+      let eat = $(this).data("eat");
   
-      var eat = {
+      eat = {
         devoured: true
       };
   
@@ -16,7 +17,7 @@ $(function() {
         type: "PUT",
         data: eat
       }).then(
-        function() {
+        () => {
           console.log("burger is now devoured", eat);
           // Reload the page to get the updated list
           location.reload();
@@ -24,12 +25,12 @@ $(function() {
       );
     });
   
-    $(".create-form").on("submit", function(event) {
+    $(".create-form").on("submit", (event) => {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
       console.log("clicked")
   
-      var newBurger = {        name: $("#ca").val().trim(),
+      let newBurger = {name: $("#ca").val().trim(),
         // devoured: $("[devoured=true]:checked").val().trim()
       };
   
@@ -38,7 +39,7 @@ $(function() {
         type: "POST",
         data: newBurger
       }).then(
-        function() {
+        () => {
           console.log("created new burger");
           // Reload the page to get the updated list
           location.reload();
